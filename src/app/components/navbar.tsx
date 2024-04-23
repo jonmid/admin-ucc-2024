@@ -2,7 +2,7 @@ import { dataNavbar } from '../data/data';
 
 const Navbar = () => {
   return (
-    <nav className='flex flex-col min-w-[290px] bg-app-light-background'>
+    <nav className='hidden bg-app-light-background sm:flex sm:flex-col sm:min-w-[290px]'>
       <aside className='flex items-center justify-center py-11 border-b-2 border-app-border'>
         <a href='#'>
           <img
@@ -18,18 +18,14 @@ const Navbar = () => {
           <a
             key={item.id}
             href={item.to}
-            className='group flex flex-row items-center mx-6 p-2 rounded-md hover:bg-app-shade-6'
+            className='flex flex-row items-center mx-6 p-2 text-2xl rounded-md text-app-shade-5 hover:bg-app-shade-6 hover:text-app-primary transition ease-in duration-200'
             onClick={() => {
               alert(item.title);
             }}
           >
-            <img src={item.icon} alt={item.title} />
+            {item.icon}
 
-            <span
-              className={`ml-3 text-base font-medium text-app-shade-5 group-hover:text-app-black`}
-            >
-              {item.title}
-            </span>
+            <span className={`ml-3 text-base font-medium`}>{item.title}</span>
           </a>
         ))}
       </ul>
@@ -38,3 +34,9 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+{
+  /* <button type="button" class="py-2 px-4  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+    Valider
+</button> */
+}

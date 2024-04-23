@@ -1,16 +1,19 @@
 import iconLogo from './../../assets/icons/logo.svg';
-import iconAnalytics from './../../assets/icons/nav_analytics.svg';
-import iconChat from './../../assets/icons/nav_chat.svg';
-import iconCalendar from './../../assets/icons/nav_calendar.svg';
-import iconProject from './../../assets/icons/nav_project.svg';
-import iconWidgets from './../../assets/icons/nav_widgets.svg';
-import iconMeetings from './../../assets/icons/nav_meetings.svg';
-import iconLogout from './../../assets/icons/nav_logout.svg';
+import {
+  FaHome,
+  FaChartLine,
+  FaCommentDots,
+  FaCalendarAlt,
+  FaSwatchbook,
+} from 'react-icons/fa';
+import { FaChalkboardUser } from 'react-icons/fa6';
+import { MdWidgets } from 'react-icons/md';
+import { BiLogOut } from 'react-icons/bi';
 
 type NavItemType = {
   id: number;
   title: string;
-  icon: string;
+  icon: JSX.Element;
   to: string;
 };
 
@@ -32,49 +35,49 @@ export const dataNavbar = (): NavbarType => ({
     {
       id: 1,
       title: 'Home',
-      icon: iconAnalytics,
+      icon: <FaHome />,
       to: '/',
     },
     {
       id: 2,
       title: 'Analytics',
-      icon: iconAnalytics,
+      icon: <FaChartLine />,
       to: '/analytics',
     },
     {
       id: 3,
       title: 'Chat',
-      icon: iconChat,
+      icon: <FaCommentDots />,
       to: '/chat',
     },
     {
       id: 4,
       title: 'Calendar',
-      icon: iconCalendar,
+      icon: <FaCalendarAlt />,
       to: '/calendar',
     },
     {
       id: 5,
       title: 'Project',
-      icon: iconProject,
+      icon: <FaSwatchbook />,
       to: '/project',
     },
     {
       id: 6,
       title: 'Widgets',
-      icon: iconWidgets,
+      icon: <MdWidgets />,
       to: '/widgets',
     },
     {
       id: 7,
       title: 'Meetings',
-      icon: iconMeetings,
+      icon: <FaChalkboardUser />,
       to: '/meetings',
     },
     {
       id: 8,
       title: 'Logout',
-      icon: iconLogout,
+      icon: <BiLogOut />,
       to: '/logout',
     },
   ],
