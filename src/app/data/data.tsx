@@ -1,6 +1,5 @@
 import iconLogo from './../../assets/icons/logo.svg';
 import {
-  FaHome,
   FaChartLine,
   FaCommentDots,
   FaCalendarAlt,
@@ -9,6 +8,7 @@ import {
 import { FaChalkboardUser } from 'react-icons/fa6';
 import { MdWidgets } from 'react-icons/md';
 import { BiLogOut } from 'react-icons/bi';
+import { BsAmazon } from 'react-icons/bs';
 
 type NavItemType = {
   id: number;
@@ -36,7 +36,7 @@ export const dataNavbar = (): NavbarType => ({
       id: 1,
       title: 'Home',
       // icon: <FaHome className={navItem === 1 ? 'text-app-primary' : 'text-app-shade-5'}/>,
-      icon: <FaHome />,
+      icon: <BsAmazon />,
       to: '/',
     },
     {
