@@ -35,6 +35,7 @@ export const dataNavbar = (): NavbarType => ({
     {
       id: 1,
       title: 'Home',
+      // icon: <FaHome className={navItem === 1 ? 'text-app-primary' : 'text-app-shade-5'}/>,
       icon: <FaHome />,
       to: '/',
     },
