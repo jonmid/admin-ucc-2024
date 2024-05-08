@@ -6,7 +6,7 @@ interface NavbarState {
 }
 
 export const useNavbarStore = create<NavbarState>((set) => ({
-  navbarItemActive: 0,
+  navbarItemActive: 1,
   selectedItemNavbar: (navItem: number) => {
     set({ navbarItemActive: navItem });
   },

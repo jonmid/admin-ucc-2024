@@ -25,8 +25,8 @@ type NavbarType = {
   nav: NavItemType[];
 };
 
-export const dataNavbar = (): NavbarType => ({
-  // export const dataNavbar = (navItem: number): NavbarType => ({
+// export const dataNavbar = (): NavbarType => ({
+export const dataNavbar = (navItem: number): NavbarType => ({
   logo: {
     title: 'xenon',
     icon: iconLogo,
@@ -35,50 +35,81 @@ export const dataNavbar = (): NavbarType => ({
     {
       id: 1,
       title: 'Home',
-      // icon: <FaHome className={navItem === 1 ? 'text-app-primary' : 'text-app-shade-5'}/>,
-      icon: <BsAmazon />,
+      icon: (
+        <BsAmazon
+          className={navItem === 1 ? 'text-app-primary' : 'text-app-shade-5'}
+        />
+      ),
       to: '/',
     },
     {
       id: 2,
       title: 'Analytics',
-      icon: <FaChartLine />,
+      icon: (
+        <FaChartLine
+          className={navItem === 2 ? 'text-app-primary' : 'text-app-shade-5'}
+        />
+      ),
       to: '/analytics',
     },
     {
       id: 3,
       title: 'Chat',
-      icon: <FaCommentDots />,
+      icon: (
+        <FaCommentDots
+          className={navItem === 3 ? 'text-app-primary' : 'text-app-shade-5'}
+        />
+      ),
       to: '/chat',
     },
     {
       id: 4,
       title: 'Calendar',
-      icon: <FaCalendarAlt />,
+      icon: (
+        <FaCalendarAlt
+          className={navItem === 4 ? 'text-app-primary' : 'text-app-shade-5'}
+        />
+      ),
       to: '/calendar',
     },
     {
       id: 5,
       title: 'Project',
-      icon: <FaSwatchbook />,
+      icon: (
+        <FaSwatchbook
+          className={navItem === 5 ? 'text-app-primary' : 'text-app-shade-5'}
+        />
+      ),
       to: '/project',
     },
     {
       id: 6,
       title: 'Widgets',
-      icon: <MdWidgets />,
+      icon: (
+        <MdWidgets
+          className={navItem === 6 ? 'text-app-primary' : 'text-app-shade-5'}
+        />
+      ),
       to: '/widgets',
     },
     {
       id: 7,
       title: 'Meetings',
-      icon: <FaChalkboardUser />,
+      icon: (
+        <FaChalkboardUser
+          className={navItem === 7 ? 'text-app-primary' : 'text-app-shade-5'}
+        />
+      ),
       to: '/meetings',
     },
     {
       id: 8,
       title: 'Logout',
-      icon: <BiLogOut />,
+      icon: (
+        <BiLogOut
+          className={navItem === 8 ? 'text-app-primary' : 'text-app-shade-5'}
+        />
+      ),
       to: '/logout',
     },
   ],
