@@ -25,6 +25,11 @@ type NavbarType = {
   nav: NavItemType[];
 };
 
+type LanguageType = {
+  label: string;
+  code: string;
+};
+
 export const dataNavbar = (navItem: number): NavbarType => ({
   logo: {
     title: 'xenon',
@@ -113,3 +118,8 @@ export const dataNavbar = (navItem: number): NavbarType => ({
     },
   ],
 });
+
+export const languageData = (): LanguageType[] => [
+  { label: 'Español', code: 'es' },
+  { label: 'Ingles', code: 'en' },
+];
