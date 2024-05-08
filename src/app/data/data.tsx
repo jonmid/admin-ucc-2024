@@ -25,7 +25,6 @@ type NavbarType = {
   nav: NavItemType[];
 };
 
-// export const dataNavbar = (): NavbarType => ({
 export const dataNavbar = (navItem: number): NavbarType => ({
   logo: {
     title: 'xenon',
